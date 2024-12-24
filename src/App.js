@@ -34,7 +34,7 @@ function App() {
 
     return (
         <div>
-            <h1>Fetched Apis</h1>
+            <h1>Fetched Api</h1>
             <ul class="ul-list">
                 {data.map(todo => (
                     <li key={todo.id}>{todo.id}. {todo.title}</li>
