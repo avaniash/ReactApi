@@ -7,7 +7,7 @@ function App() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
+        fetch('http://localhost/new_wp/wp-json/custom/v1/testimonials')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -25,7 +25,7 @@ function App() {
     }, []);
 
     if (loading) {
-        return <div>Loading fff...</div>;
+        return <div>Loading...</div>;
     }
 
     if (error) {
@@ -34,7 +34,7 @@ function App() {
 
     return (
         <div>
-            <h1>Fetched Apiss</h1>
+            <h1>Fetched Apis</h1>
             <ul class="ul-list">
                 {data.map(todo => (
                     <li key={todo.id}>{todo.id}. {todo.title}</li>
